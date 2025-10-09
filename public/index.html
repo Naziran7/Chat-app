@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Chat App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h1>Login to Chat</h1>
+      <input id="username" placeholder="Enter your username" />
+
+      <button id="login-btn">Join Chat</button>
+    </div>
+
+    <script>
+      const loginBtn = document.getElementById("login-btn");
+      loginBtn.addEventListener("click", () => {
+        const username = document.getElementById("username").value.trim();
+        if (username) {
+          localStorage.setItem("username", username);
+          window.location.href = "chat.html";
+        } else {
+          alert("Please enter a username");
+        }
+      });
+    </script>
+  </body>
+</html>

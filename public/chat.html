@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="chat-wrapper">
+      <div class="sidebar">
+        <h3>Online Users</h3>
+        <ul id="online-users"></ul>
+        <button id="toggle-mode">Toggle Dark/Light</button>
+      </div>
+      <div class="chat-container">
+        <ul id="messages"></ul>
+        <form id="chat-form">
+          <input
+            id="message-input"
+            autocomplete="off"
+            placeholder="Type a message..."
+          />
+          <button>Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
